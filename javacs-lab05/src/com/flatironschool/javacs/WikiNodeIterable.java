@@ -54,18 +54,19 @@ public class WikiNodeIterable implements Iterable<Node> {
 		 * 
 		 * @param node
 		 */
-		public WikiNodeIterator(Node node) {
+
+		public WikiNodeIterator(Node node){
 			stack = new ArrayDeque<Node>();
 		    stack.push(root);
 		}
 		
 		@Override
-		public boolean hasNext() {
+		public boolean hasNext(){
 			return !stack.isEmpty();
 		}
 
 		@Override
-		public Node next() {
+		public Node next(){
 			// if the stack is empty, we're done
 			if (stack.isEmpty()) {
 				throw new NoSuchElementException();
